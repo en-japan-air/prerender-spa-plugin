@@ -202,22 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 ```
 
-#### Inline style tags handling
-
-If you rely on inline CSS, i.e. you do not extract CSS from your bundle and, thus, experience duplicate CSS style tags, consider using [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) to extract CSS into a separate file and then either inject CSS back into a `template.html` file using [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) or just call it as an external CSS file.
-
-Either way, there will not be any unnecessary styles inside JS.
-
-### Troubleshooting
-
-On Windows-based systems, users have reported `COM` errors when trying to build. This may be due to an outdated `phantomjs-prebuilt` package.
-
-```bash
-npm cache clean --force
-npm install
-npm rebuild
-```
-
 ### Caveats
 
 - Only works with routing strategies using the HTML5 history API. No hash(bang) URLs.
@@ -229,5 +213,3 @@ npm rebuild
 <br>
 
 ---
-
-**MAINTAINERS WANTED**: Ahh, so much open source! With my current workload, I simply don't have time to give this project the attention it deserves. If you're interested in becoming a maintainer, please [tweet me](https://twitter.com/chrisvfritz) to let me know!
