@@ -1,8 +1,8 @@
 <p align="center"><img width="150" src="https://github.com/chrisvfritz/prerender-spa-plugin/blob/master/art/logo.png?raw=true"></p>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/prerender-spa-plugin"><img src="https://badge.fury.io/js/prerender-spa-plugin.svg" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/prerender-spa-plugin"><img src="https://img.shields.io/npm/l/prerender-spa-plugin.svg" alt="License"></a>
+  <a href="https://badge.fury.io/js/%40en-japan-air%2Fprerender-spa-plugin"><img src="https://badge.fury.io/js/%40en-japan-air%2Fprerender-spa-plugin.svg" alt="npm version" height="18"></a>
+  <a href="https://www.npmjs.com/package/@en-japan-air/prerender-spa-plugin"><img src="https://img.shields.io/npm/l/@en-japan-air/prerender-spa-plugin.svg" alt="License"></a>
 </p>
 
 <h1 align="center">Prerender SPA Plugin</h1>
@@ -81,6 +81,8 @@ module.exports = {
         // necessary. All synchronous scripts are already executed before
         // capturing the page content.
 
+        // NOTE: still working on updating the options below to match chrome headless 
+
         // Wait until a specific event is fired on the document.
         captureAfterDocumentEvent: 'custom-post-render-event',
         // This is how you would trigger this example event:
@@ -108,34 +110,6 @@ module.exports = {
         // path of index file. By default it's index.html in static root.
         indexPath: path.resolve('/dist/path/to/index.html'),
 
-        // Because PhantomJS occasionally runs into an intermittent issue,
-        // we will retry a page capture up to 10 times by default. You may
-        // raise or lower this limit if you wish.
-        maxAttempts: 10,
-
-        // Prevent PhantomJS from navigating away from the URL passed to it
-        // and prevent loading embedded iframes (e.g. Disqus and Soundcloud
-        // embeds), which are not ideal for SEO and may introduce JS errors.
-        navigationLocked: true,
-
-        // The options below expose configuration options for PhantomJS,
-        // for the rare case that you need special settings for specific
-        // systems or applications.
-
-        // http://phantomjs.org/api/command-line.html#command-line-options
-        phantomOptions: '--disk-cache=true',
-
-        // http://phantomjs.org/api/webpage/property/settings.html
-        phantomPageSettings: {
-          loadImages: true
-        },
-        
-        // http://phantomjs.org/api/webpage/property/viewport-size.html
-        phantomPageViewportSize: {
-          width: 1280,
-          height: 800
-        },
-        
         // Manually transform the HTML for each page after prerendering,
         // for example to set the page title and metadata in edge cases
         // where you cannot handle this via your routing solution.
