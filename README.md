@@ -81,21 +81,21 @@ module.exports = {
         // necessary. All synchronous scripts are already executed before
         // capturing the page content.
 
-        // NOTE: still working on updating the options below to match chrome headless 
-
         // Wait until a specific event is fired on the document.
+        // CURRENTLY UNSUPPORTED
         captureAfterDocumentEvent: 'custom-post-render-event',
         // This is how you would trigger this example event:
+        // CURRENTLY UNSUPPORTED
         // document.dispatchEvent(new Event('custom-post-render-event'))
 
         // Wait until a specific element is detected with
         // document.querySelector.
-        captureAfterElementExists: '#content',
+        // CURRENTLY UNSUPPORTED
+        // captureAfterElementExists: '#content',
 
-        // Wait until a number of milliseconds has passed after scripts
-        // have been executed. It's important to note that this may
-        // produce unreliable results when relying on network
-        // communication or other operations with highly variable timing.
+        // Wait until a number of milliseconds has passed after the page load event.
+        // It's important to note that this may produce unreliable results when
+        // relying on network communication or other operations with highly variable timing.
         captureAfterTime: 5000,
 
         // NOTE: You can even combine strategies if you like. For example,
@@ -109,6 +109,10 @@ module.exports = {
         
         // path of index file. By default it's index.html in static root.
         indexPath: path.resolve('/dist/path/to/index.html'),
+
+        // Add chrome flags
+        // NOTE: '--no-sandbox', '--disable-setuid-sandbox' are added by default
+        chromeFlags: ['--headless', '--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--user-data-dir=/tmp']
 
         // Manually transform the HTML for each page after prerendering,
         // for example to set the page title and metadata in edge cases
