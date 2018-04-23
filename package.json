@@ -19,7 +19,7 @@
     "lodash": "^4.13.1",
     "mkdirp": "0.5.1",
     "portfinder": "1.0.3",
-    "prerender-chrome-headless": "^2.0.0"
+    "prerender-chrome-headless": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^2.5.1",
