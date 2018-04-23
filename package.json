@@ -1,6 +1,6 @@
 {
   "name": "@en-japan-air/prerender-spa-plugin",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Prerenders static HTML in a single-page application. Based on the work of Chris Fritz (https://github.com/chrisvfritz/prerender-spa-plugin) and Fabio Crisci (https://github.com/en-japan-air/prerender-chrome-headless)",
   "repository": {
     "type": "git",
