@@ -4,7 +4,7 @@
   "description": "Prerenders static HTML in a single-page application. Based on the work of Chris Fritz (https://github.com/chrisvfritz/prerender-spa-plugin) and Fabio Crisci (https://github.com/en-japan-air/prerender-chrome-headless)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/en-japan-air/prerender-spa-plugin.git"
+    "url": "git://github.com/en-japan/prerender-spa-plugin.git"
   },
   "publishConfig": {
     "registry": "https://api.bintray.com/npm/en-japan/npm"
